@@ -28,3 +28,14 @@
 <img width="654" height="436" alt="image" src="https://github.com/user-attachments/assets/da3baab2-6b9b-4017-a4d2-9fcd3daca856" />
 
 <img width="573" height="411" alt="image" src="https://github.com/user-attachments/assets/3b04ba96-0de1-4c7c-9dee-b7a1ac757992" />
+
+дүгнэлт
+Python SimpleHTTP (порт 8000) ашиглан pyrat төрлийн интерактив Python "jail"/консоль нээлттэй ажиллаж байсан. Тус сервис нь удирдлагын (admin) команд эсвэл shell гэсэн команд хүлээн авч, хэрэв админ эрхтэй холболт бол root шэлл олгож чадаж байна уу гэдгээ шалгадаг. Тухайн системд /opt/dev/.git/config файлд think хэрэглэгчийн Git credential (username=think, password=_TH1NKINGPirate$_) нээлттэй байсан тул тэдгээрийг ашиглан админын консол руу нэвтэрч, дараа нь нууц үг давтан туршилтаар (bruteforce/try) abc123 -ийг олж admin-аар бүрэн root шэлл авсан. Эцэст нь root эрхээр root.txt файлыг уншиж чадсан.
+сэргийлэх
+Тус машины 8000 порт дээр ажиллаж буй сервисийг зогсоох (хэрвээ production биш, шалгах бол)
+sudo systemctl stop <service> эсвэл хэрвээ script бол процессыг /bin/kill-ээр зогсооно.
+Хэрэглэгдэж буй админ/репо credential-уудыг даруй солих — think болон admin-ын нууц үгийг систем дээр болон GitHub/QA систем дээр шууд сольж, тухайн credential-ыг даруй устгана.
+Энэ credential-ыг агуулсан файлыг устгах: /opt/dev/.git/config-ийг устгах, commit түүхээс салгах (гаргууд арга: git filter-repo эсвэл git filter-branch), эсвэл репог public биш сервер рүү шилжүүлэх.
+Дараалал болон нэвтрэлтүүдийг шалгах (audit): /var/log/auth.log, web service logs, bash history-г шалгана. Хэн, хэзээ нэвтэрсэн, ямар IP-ууд холбогдсон гэдгийг тэмдэглэх.
+Плаги/бид тогтоосон backdoor/unknown accounts-ыг шалгах — /etc/passwd, /etc/sudoers-ийг шалгаад сэжигтэй хэрэглэгчийг устгах.
+Хэрэв боломжтой бол машин дээрээс бүрэн rebuild/restore хийх — compromised server-г rebuild хийх нь хамгийн баталгаатай шийдэл.
