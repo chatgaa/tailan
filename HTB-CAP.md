@@ -24,7 +24,7 @@ ssh-ээр хандаж user.txt авсан
 
 <img width="957" height="949" alt="Screenshot From 2025-10-07 00-18-15" src="https://github.com/user-attachments/assets/1c188f25-2737-4244-b667-acce624eb27b" />
 
-
+CVE-2021-3560 нь Polkit (policy kit) системийн алдаа бөгөөд “privilege escalation” буюу хэрэглэгчийн эрхийг дэвшүүлэх vuln (adj. security flaw) юм.
 
 <img width="683" height="322" alt="Screenshot From 2025-10-07 00-23-52" src="https://github.com/user-attachments/assets/162b9e20-218a-48b9-9bb2-80e7e404a75e" />
 
