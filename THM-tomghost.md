@@ -1,10 +1,19 @@
 <img width="951" height="410" alt="Screenshot From 2025-10-09 00-18-25" src="https://github.com/user-attachments/assets/0a66b908-1cd9-4a4b-9d76-f41079513e34" />
 
+Port 22 (SSH): OpenSSH 7.2p2 ажиллаж байна — хуучирсан байж магадгүй.
 
+Port 53: DNS үйлчилгээ ажиглагдав.
+
+Port 8009 (AJP13): Apache JServ Protocol нээлттэй байна — энэ нь аюултай байж болох ба Ghostcat (CVE-2020-1938) шиг критик сул талтай холбоотой.
+
+Port 8080: Apache Tomcat 9.0.30 ажиллаж байна — мөн хуучирсан хувилбар.
 
 <img width="959" height="642" alt="Screenshot From 2025-10-09 00-21-30" src="https://github.com/user-attachments/assets/0933f7b6-025c-4a7a-b691-65a8a1a37a19" />
 <img width="915" height="368" alt="Screenshot From 2025-10-09 01-35-51" src="https://github.com/user-attachments/assets/fb980e40-ed2b-4349-9cae-d71c704fac97" />
 <img width="1063" height="194" alt="Screenshot From 2025-10-09 01-36-16" src="https://github.com/user-attachments/assets/4038f092-65fb-4f24-bb79-34477cb206bd" />
+
+Metasploit руу орж 8009 ба 8080 порттой ажиллах аргыг туршсан:
+
 <img width="842" height="774" alt="Screenshot From 2025-10-09 01-38-50" src="https://github.com/user-attachments/assets/cb8efb74-4b06-4e47-b168-a3672d88e827" />
 <img width="723" height="109" alt="Screenshot From 2025-10-09 01-39-20" src="https://github.com/user-attachments/assets/456496f8-6c7c-4114-97e0-3a91acc4d388" />
 <img width="730" height="810" alt="Screenshot From 2025-10-09 01-59-46" src="https://github.com/user-attachments/assets/c072f3ed-1ca4-4167-b084-83dfdffc62f4" />
